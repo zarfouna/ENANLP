@@ -8,6 +8,12 @@ const WorkboxPlugin = require('workbox-webpack-plugin');
 module.exports = {
     entry: './src/client/index.js',
     mode: 'production',
+    output: {
+        libraryTarget: 'var',
+        library: 'Client',
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'bundle.min.js'
+    },
     module: {
         rules: [
             {
