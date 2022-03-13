@@ -28,11 +28,9 @@ app.post('/', async function (req, res) {
     const {article}=req.body
     
     const sentiment=await getSentiment(article)
-    
-    res.send({
-         article:article,
-         sentiment: sentiment    
-    })
+    console.log(sentiment)
+    res.send(sentiment    
+    )
     
 })
  

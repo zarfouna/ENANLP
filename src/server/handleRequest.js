@@ -18,7 +18,12 @@ const getSentiment =async(article)=>{
     scores["N"]= "negative"
     scores["N+"]= "strong negative"
     scores["NONE"]= "without polarity"
-    return scores[data.score_tag];
+    return {article:article,
+      subjectivity:data.subjectivity,
+      agreement:data.agreement,
+      confidence:data.confidence,
+      irony:data.irony,
+      score_tag:scores[data.score_tag]};
 
   }
 

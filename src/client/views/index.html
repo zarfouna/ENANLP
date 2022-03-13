@@ -15,9 +15,9 @@
       <section>
         <form class="" onsubmit="return Client.handleSubmit(event)">
           <input
-            id="name"
+            id="articleInput"
             type="text"
-            name="input"
+            name="articleInput"
             value=""
             placeholder="Article"
           />
@@ -33,7 +33,14 @@
 
       <section>
         <strong>Form Results:</strong>
-        <div id="results"></div>
+        <div id="results">
+          <p id="article"></p>
+          <p id="subjectivity"></p>
+          <p id="agreement"></p>
+          <p id="confidence"></p>
+          <p id="irony"></p>
+          <p id="score_tag"></p>
+        </div>
       </section>
     </main>
 
